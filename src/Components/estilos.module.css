@@ -1,0 +1,156 @@
+.StylesHome{
+    background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\bgBanner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-x: start;
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    justify-content: start;
+
+
+}
+
+.stylesHome h2 {
+    margin: 10px; /* Puedes ajustar el margen según tus necesidades */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para que el texto sea legible */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+/* navBar */
+.NavBar{
+    font-weight: 500;
+
+}
+
+
+
+/* Banner Dos "Conocemos lo mejor para vos" */
+.BannerDos{
+
+    background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\BannerDos.jpg");
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-position: center;
+    height: 53vh;
+    display: flex;
+    align-items: center;
+    
+}
+.PBanner{
+color: hsla(0,0%,100%,.8) ;  
+font-size: 20px; 
+
+}
+.H2Banner{
+    color:#ffff;
+    font-size:48px ;
+}
+.ButtonBanner{
+    font-size: 18px;
+    color: #ffff;
+    background-color: transparent;
+    border: solid 1px #ffff;
+    width: 16rem;   
+}
+
+
+/* Seccion de envios y servicios  */
+
+.Envios{
+    /* color del texto #666 */
+display: flex;
+align-items: center;
+background-color: #adadad0e;
+justify-content: center;
+
+
+
+}
+
+/* Iconos seccion envios y servicios */
+.iconos{
+    width: 3em;
+    padding: 3px 3px 3px 3px;
+    margin: 0px 13px 10px 2px;
+    
+}
+
+/* Footer */
+
+.Footer{
+background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backgroundFooter.jpg");
+background-position: center;
+background-size: cover;
+padding-top: 20px;
+font-family: 'Rajdhani', sans-serif;
+
+}   
+
+
+.HFooter{
+    color: #ffffffb3;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.AFooter{
+color:  #ffffffcc;
+text-decoration: none;
+
+}
+
+
+/* Sobre Nosotros */
+
+.Strong{
+    font-size: 54px ;
+    color: #969595de;
+    border-color: hsla(0,0%,72%,.5);
+
+}
+
+.h1Element{
+    color: #393939;
+    font-size: 39px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    
+}
+
+.pElement{
+    font-size: 19px;
+    color: #2b2a2a;
+
+    
+}
+
+
+
+
+
+/* Media Query para el iframe seccion "Contacto" */
+@media only screen and (max-width: 1000px){
+    .Mapa{
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 600px){
+    .Mapa{
+        width: 85vw;
+    
+    }
+    
+}
+
+
