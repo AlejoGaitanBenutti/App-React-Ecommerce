@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {getAllMtb} from "../services/productosServices"
 import { Container, Row } from "react-bootstrap";
 import CardBikesMtb from "./CardBikesMtb";
-
+import estilos from "../Components/estilos.module.css"
 
 function ProductosMtb(){
 
@@ -33,7 +33,7 @@ request();
 return(
 
 <Container className="border-bottom">
-    <h2 className="text-dark mt-4  fs-1">Bicicletas MTB </h2>
+    <h2 className={estilos.titleBicicletas}>Bicicletas MTB </h2>
        {/* <input placeholder="Search" type="search" value={buscar} onChange={(e)=> setBuscar(e?.target?.value)}/> colocar este input para buscar productos cuando cree el store  */}
     <Row>
         {prodMtb.map((producto) => (

@@ -6,28 +6,49 @@
     background-position-x: start;
     display: flex;
     flex-direction: column;
-    gap: 85px;
-    justify-content: center;
+    gap: 80px;
     align-items: center;
     height: 70vh;
-    justify-content: start;
+
+
 
 
 }
 
-.stylesHome h2 {
-    margin: 10px; /* Puedes ajustar el margen según tus necesidades */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para que el texto sea legible */
-    padding: 10px;
-    border-radius: 5px;
+.letraGrande{
+    font-size: 52px;
 }
+
 
 
 
 /* navBar */
 .NavBar{
+   
     font-weight: 500;
+    align-items: center;
+    margin-left: 2%;
+    
 
+}
+
+.itemsNav{
+    color: white !important;
+    margin: 4px 4px 4px 4px;
+    font-weight: 500!important;
+    font-size: 1.01rem!important;
+}
+
+.itemsNav:hover{
+    color:#0097f5!important;
+    
+}
+
+.titleBicicletas{
+    font-size: 48px;
+    color: #393939;
+    margin-top: 25px;
+    font-weight: 700;
 }
 
 
@@ -152,5 +173,17 @@ text-decoration: none;
     }
     
 }
+
+
+@media only screen and (max-width: 550px){
+    .StylesHome{
+        height: 78vh;
+        gap: 15px;
+    
+    }
+    
+}
+
+
 
 

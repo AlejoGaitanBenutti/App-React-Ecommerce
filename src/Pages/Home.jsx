@@ -12,6 +12,7 @@ import ServicioEnvios from "../Components/Envios";
 import Footer from "../Components/Foter";
 
 
+
 function Home (){
     console.log(firebase); // mostrando que anda firebase en consola
     return(
@@ -19,7 +20,8 @@ function Home (){
         
         <Container fluid className={estilos.StylesHome}>
             
-            <NavBar />
+            <NavBar/>
+            
             <Banner /> 
             
         </Container>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {getAllBmx} from "../services/productosServices"
 import { Container, Row } from "react-bootstrap";
 import CardBikesBmx from "./CardBikesBmx";
+import estilos from "../Components/estilos.module.css"
 
 
 
@@ -40,7 +41,7 @@ return(
 
 
 <Container >
-    <h2 className="text-dark mt-5 fs-1">Bicicletas BMX </h2>
+    <h2 className={estilos.titleBicicletas}>Bicicletas BMX </h2>
         {/*colocar este input para buscar productos cuando cree el store  */}
     <Row>
         {prodBmx.map((producto) => (
