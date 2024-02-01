@@ -13,15 +13,16 @@ function SobreNosotros(){
 
         <Container fluid className="d-flex flex-column justify-content-end">
 
-        <Container fluid className="bg-dark mb-4">
-            <NavBar/>
-        </Container>
+            <Container fluid className="bg-dark mb-4">
+                <NavBar/>
+            </Container>
 
-    
-        <NosotrosInfo/>
-        <ImgNosotros/>
+            <Container fluid className="mb-5">
+                <NosotrosInfo/>
+                <ImgNosotros/>
+            </Container>    
         <Footer/>
-
+        
         </Container>
 
 

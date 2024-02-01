@@ -55,6 +55,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
+  color: #0097f5;
   border-color:
   #0097f5;
 }

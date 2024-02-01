@@ -11,8 +11,6 @@
     height: 70vh;
 
 
-
-
 }
 
 .letraGrande{
@@ -24,11 +22,11 @@
 
 /* navBar */
 .NavBar{
-   
-    font-weight: 500;
+
     align-items: center;
     margin-left: 2%;
-    
+    font-weight: 600;
+
 
 }
 
@@ -36,7 +34,8 @@
     color: white !important;
     margin: 4px 4px 4px 4px;
     font-weight: 500!important;
-    font-size: 1.01rem!important;
+    font-size: 1.0rem!important;
+    text-indent: 5px;
 }
 
 .itemsNav:hover{
@@ -89,7 +88,8 @@ font-size: 20px;
     /* color del texto #666 */
 display: flex;
 align-items: center;
-background-color: #adadad0e;
+
+background: linear-gradient( white,rgba(100, 100, 100, 0.705) );
 justify-content: center;
 
 
@@ -105,7 +105,6 @@ justify-content: center;
 }
 
 /* Footer */
-
 .Footer{
 background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backgroundFooter.jpg");
 background-position: center;
@@ -114,7 +113,6 @@ padding-top: 20px;
 font-family: 'Rajdhani', sans-serif;
 
 }   
-
 
 .HFooter{
     color: #ffffffb3;
@@ -129,7 +127,6 @@ text-decoration: none;
 
 }
 
-
 /* Sobre Nosotros */
 
 .Strong{
@@ -138,7 +135,6 @@ text-decoration: none;
     border-color: hsla(0,0%,72%,.5);
 
 }
-
 .h1Element{
     color: #393939;
     font-size: 39px;
@@ -146,16 +142,207 @@ text-decoration: none;
     padding-bottom: 20px;
     
 }
-
 .pElement{
     font-size: 19px;
     color: #2b2a2a;
+    margin-bottom: 50px;
 
     
 }
 
 
 
+/* Login */
+
+.containLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    background-color: red;
+    background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\BackLoginPc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 15vh;
+    background-position:center ;
+    background-attachment:fixed;
+    
+    
+}
+
+.containFormLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1.4px solid rgb(223, 28, 191); */
+    width: 25vw!important;
+    height: 50vh!important;
+    margin-bottom: 50px;
+    gap: 15px;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid white;
+    backdrop-filter:blur(3.2px) ;
+    margin-bottom: 120px;
+    
+}
+
+
+.Form{
+    width: 80%!important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #2b2a2a;
+    text-align: start;
+    
+    
+    
+    
+}
+
+.signIn{
+    font-size: 1.8rem!important;
+    font-weight: 700!important;
+    color: #2b2a2a;
+    text-transform: uppercase;
+}
+
+.nameInput{
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+}
+
+.inputLine{
+    color: #2b2a2a!important;
+    width: 100%!important;
+    background-color: transparent!important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #cbcbcb;
+    outline: none;
+    margin-bottom: 1rem;
+    font-weight: 600!important;
+    
+    
+}
+
+.inputLine:hover{
+    background-color:#0097f550!important;
+}
+
+.buttonLogin{
+    width: 50%!important;
+    height: 45px!important;
+    border-radius: 55px!important;
+    background:rgba(255, 255, 255, 0.14)!important;
+    color: black !important;
+    font-size: 14px!important;
+    font-weight: 600!important;
+    text-transform: uppercase!important;
+    border: 2px solid white!important;
+    margin-bottom: 1rem!important;
+    cursor: pointer!important;
+    transition: 1.5s!important;
+
+
+}
+
+/* Boton de registrarse en login */
+.buttonLoginDos{
+    width: 50%!important;
+    height: 45px!important;
+    border-radius: 55px!important;
+    background: transparent!important;
+    color: black!important;
+    font-size: 14px!important;
+    font-weight: 600!important;
+    text-transform: uppercase;
+    border: 2px solid white!important ;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 1.5s!important;
+    opacity: 0.6!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.buttonLogin:hover{
+    box-shadow: 0px 0px 8px #ffffffa4;
+    border:solid 1px #0097f5!important;
+    background-color:#0097f550!important;
+    
+}
+
+.buttonLoginDos:hover{
+    opacity: 1;
+    border:solid 1px #0097f5!important;
+    box-shadow: 0px 0px 8px #ffffffa4;
+    background-color:#0097f550!important;
+}
+
+/* Media Query login */
+@media only screen and (max-width: 800px){
+    .Form{
+        width: 85%!important;
+        /* border: solid red; */
+        height: 40vh;
+        
+    }
+    .containFormLogin{
+        width: 85vw!important;
+        
+        
+    }
+    .containLogin{
+        gap: 22vh;
+        background-position: left;
+    
+    }
+    .buttonLogin{
+        width: 50%!important;
+    }
+}
+
+
+/* media Phones  */
+@media only screen and (max-width: 700px){
+
+    .containLogin{
+        background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backLoginPhone.jpg");
+        /* background-position: -290px; */
+        background-size: cover;
+        
+    }
+    .buttonLogin{
+        width: 75%!important;
+    }
+    .buttonLoginDos{
+        width: 75%!important;
+    }
+}
+
+/* phone rotacion */
+@media only screen and (max-height: 400px){
+
+    .containFormLogin{
+        width: 60vw!important;
+        height: 150vh!important;
+        
+        
+    }
+    .containLogin{
+        background-image: url("../Imagenes/backLoginPhone.jpg");
+    }
+
+}
 
 
 /* Media Query para el iframe seccion "Contacto" */
@@ -165,7 +352,6 @@ text-decoration: none;
     }
     
 }
-
 @media only screen and (max-width: 600px){
     .Mapa{
         width: 85vw;
@@ -173,8 +359,6 @@ text-decoration: none;
     }
     
 }
-
-
 @media only screen and (max-width: 550px){
     .StylesHome{
         height: 78vh;
@@ -183,7 +367,3 @@ text-decoration: none;
     }
     
 }
-
-
-
-

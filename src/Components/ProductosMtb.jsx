@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import {getAllMtb} from "../services/productosServices"
+import {getAllMtb} from "../services/productosServices";
 import { Container, Row } from "react-bootstrap";
 import CardBikesMtb from "./CardBikesMtb";
-import estilos from "../Components/estilos.module.css"
+import estilos from "../Components/estilos.module.css";
+import { NavLink, Link } from "react-router-dom";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 function ProductosMtb(){
 
@@ -47,7 +49,7 @@ return(
 
     </Row>
     <Row>
-        <p className="text-decoration-underline mb-4">Todos los productos Mtb --</p>
+    <NavLink as={Link} to="#"><p className="text-decoration-underline text-dark mb-4 fs-5">Todos los productos Mtb <IoIosArrowRoundForward /></p></NavLink>
     </Row>
 </Container>
 

@@ -3,7 +3,8 @@ import {getAllBmx} from "../services/productosServices"
 import { Container, Row } from "react-bootstrap";
 import CardBikesBmx from "./CardBikesBmx";
 import estilos from "../Components/estilos.module.css"
-
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { NavLink, Link } from "react-router-dom";
 
 
 function ProductosBmx(){
@@ -57,7 +58,7 @@ return(
 
     </Row>
     <Row>
-        <p className="text-decoration-underline mb-4">Todos los productos BMX --</p>
+       <NavLink as={Link} to="#"><p className="text-decoration-underline mb-4 text-dark fs-5">Todos los productos BMX <IoIosArrowRoundForward /></p></NavLink> 
     </Row>
 </Container>
 

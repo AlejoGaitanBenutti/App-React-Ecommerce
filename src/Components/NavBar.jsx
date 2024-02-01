@@ -3,7 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {TbBabyCarriage} from "react-icons/Tb"
 import { Container } from "react-bootstrap";
-import {LiaGripLinesVerticalSolid} from "react-icons/Lia"
 import estilos from "../Components/estilos.module.css"
 
 
@@ -32,7 +31,7 @@ function NavBar(){
                         <Nav.Link className={estilos.itemsNav} as={Link} to="/">Inicio</Nav.Link>
                         <Nav.Link className={estilos.itemsNav}  as={Link} to="/tiendaOnline">Tienda Online</Nav.Link>
                         <Nav.Link className={estilos.itemsNav} as={Link} to="/nosotros">Sobre Nosotros</Nav.Link>
-                        <Nav.Link className={estilos.itemsNav} as={Link} to="/contacto"> Contacto <LiaGripLinesVerticalSolid className="mx-1 my-1" /> </Nav.Link>
+                        <Nav.Link className={estilos.itemsNav} as={Link} to="/contacto"> Contacto  </Nav.Link>
                         <Nav.Link className={estilos.itemsNav}  as={Link} to="/cesta" >Cesta <TbBabyCarriage className="mx-1 "/>  </Nav.Link>
                         
                     </Nav>
