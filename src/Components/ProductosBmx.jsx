@@ -58,7 +58,7 @@ return(
 
     </Row>
     <Row>
-       <NavLink as={Link} to="#"><p className="text-decoration-underline mb-4 text-dark fs-5">Todos los productos BMX <IoIosArrowRoundForward /></p></NavLink> 
+        <NavLink as={Link} to="#"><p className="text-decoration-underline mb-4 text-dark fs-5">Todos los productos BMX <IoIosArrowRoundForward /></p></NavLink> 
     </Row>
 </Container>
 

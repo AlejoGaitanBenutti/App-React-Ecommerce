@@ -227,6 +227,7 @@ text-decoration: none;
     outline: none;
     margin-bottom: 1rem;
     font-weight: 600!important;
+    font-size: large!important;
     
     
 }
@@ -319,6 +320,7 @@ text-decoration: none;
         background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backLoginPhone.jpg");
         /* background-position: -290px; */
         background-size: cover;
+        gap: 70px;
         
     }
     .buttonLogin{
@@ -326,6 +328,10 @@ text-decoration: none;
     }
     .buttonLoginDos{
         width: 75%!important;
+    }
+    .containFormLogin{
+        height: 80vh!important;
+        
     }
 }
 
