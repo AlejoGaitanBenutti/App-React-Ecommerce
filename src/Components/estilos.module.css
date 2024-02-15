@@ -152,7 +152,7 @@ text-decoration: none;
 
 
 
-/* Login */
+/* Login y registro mismo nombre de clases */
 
 .containLogin{
     display: flex;
@@ -170,6 +170,8 @@ text-decoration: none;
     
 }
 
+
+
 .containFormLogin{
     display: flex;
     flex-direction: column;
@@ -178,7 +180,6 @@ text-decoration: none;
     /* border: 1.4px solid rgb(223, 28, 191); */
     width: 25vw!important;
     height: 50vh!important;
-    margin-bottom: 50px;
     gap: 15px;
     transition: 0.5s;
     background-color: rgba(255, 255, 255, 0.1);
@@ -187,8 +188,29 @@ text-decoration: none;
     backdrop-filter:blur(3.2px) ;
     margin-bottom: 120px;
     
+    
 }
+.containFormRegistro{
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1.4px solid rgb(223, 28, 191); */
+    width: 25vw!important;
+    height: 100%!important;
+    margin-bottom: 5px;
+    gap: 25px;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid white;
+    backdrop-filter:blur(7px) ;
+    
+    
+    
+    
+}
 
 .Form{
     width: 80%!important;
@@ -201,12 +223,14 @@ text-decoration: none;
     
     
     
+    
 }
 
 .signIn{
     font-size: 1.8rem!important;
     font-weight: 700!important;
     color: #2b2a2a;
+    padding-top: 15px;
     text-transform: uppercase;
 }
 
@@ -236,7 +260,7 @@ text-decoration: none;
     background-color:#0097f550!important;
 }
 
-.buttonLogin{
+.buttonForm{
     width: 50%!important;
     height: 45px!important;
     border-radius: 55px!important;
@@ -254,7 +278,7 @@ text-decoration: none;
 }
 
 /* Boton de registrarse en login */
-.buttonLoginDos{
+.buttonFormDos{
     width: 50%!important;
     height: 45px!important;
     border-radius: 55px!important;
@@ -275,26 +299,26 @@ text-decoration: none;
 }
 
 
-.buttonLogin:hover{
+.buttonForm:hover{
     box-shadow: 0px 0px 8px #ffffffa4;
     border:solid 1px #0097f5!important;
     background-color:#0097f550!important;
     
 }
 
-.buttonLoginDos:hover{
+.buttonFormDos:hover{
     opacity: 1;
     border:solid 1px #0097f5!important;
     box-shadow: 0px 0px 8px #ffffffa4;
     background-color:#0097f550!important;
 }
 
-/* Media Query login */
+/* Media Query login y registro*/
 @media only screen and (max-width: 800px){
     .Form{
         width: 85%!important;
         /* border: solid red; */
-        height: 40vh;
+        height: 100%!important;
         
     }
     .containFormLogin{
@@ -310,6 +334,14 @@ text-decoration: none;
     .buttonLogin{
         width: 50%!important;
     }
+
+    .containFormRegistro{
+        
+        width: 80%!important;
+        justify-content: start!important;
+        padding-top: 10px!important;
+        
+    }
 }
 
 
@@ -323,14 +355,22 @@ text-decoration: none;
         gap: 70px;
         
     }
-    .buttonLogin{
+    .form{
+        height: 100%!important;
+    }
+    .buttonForm{
         width: 75%!important;
     }
-    .buttonLoginDos{
+    .buttonFormDos{
         width: 75%!important;
     }
-    .containFormLogin{
-        height: 80vh!important;
+    
+    .containFormRegistro{
+        width: 90vw!important;
+        padding-bottom: 25%!important;
+        justify-content: center!important;
+        padding-top: 20px;
+
         
     }
 }

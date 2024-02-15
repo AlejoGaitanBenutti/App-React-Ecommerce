@@ -6,6 +6,9 @@ import NavBar from "../Components/NavBar";
 import Footer from "../Components/Foter";
 import { useState } from "react";
 import AlertNavigation from "../Components/AlertNavigation";
+import { Link } from "react-router-dom";
+import { login } from "../services/authServices";
+import { useNavigate } from "react-router-dom";
 
 function Login(){
 
@@ -26,9 +29,21 @@ function Login(){
     });
 
 
-    // crear funcion para el onsubmit y ejecutar los cambios de estado
 
+    const onSubmit= async (dataForm)=>{
 
+        try{
+            console.log(dataForm);
+            const response= await login(dataForm)
+            console.log(response);
+
+        
+            
+        
+        }catch(e){
+            console.log("Error",e);
+        }
+    }
 
 
 
@@ -58,7 +73,7 @@ function Login(){
             
 
 
-            <Form className={estilos.Form} onSubmit={handleSubmit()}>
+            <Form className={estilos.Form} onSubmit={handleSubmit(onSubmit)}>
         
                 <Input  type="email"
                         label="Email" 
@@ -98,8 +113,8 @@ function Login(){
 
                 </Input>
                 <Row className="d-flex justify-content-center flex-column align-items-center mt-3 ">
-                    <Button className={estilos.buttonLogin} type="submit" variant="light">Ingresar</Button>
-                    <Button className={estilos.buttonLoginDos}>Registrarse</Button>
+                    <Button className={estilos.buttonForm} type="submit" variant="light">Ingresar</Button>
+                    <Button as={Link} to="/registro" className={estilos.buttonFormDos} >Registrarse</Button>
                 </Row>
                 
                 

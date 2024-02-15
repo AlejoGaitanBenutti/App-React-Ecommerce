@@ -4,6 +4,7 @@ import './App.css'
 import SobreNosotros from './Pages/SobreNosotros'
 import Contacto from './Pages/Contacto'
 import Login from './Pages/Login'
+import Registro from './Pages/Registro'
 
 
 
@@ -24,7 +25,7 @@ function App() {
           <Route path='/nosotros' element={<SobreNosotros/>} />
           <Route path='/contacto' element ={<Contacto/>} />
           <Route path='/login' element ={<Login/>} />
-        
+          <Route path='/registro' element ={<Registro/>} />
         </Routes>
   
     </Router>

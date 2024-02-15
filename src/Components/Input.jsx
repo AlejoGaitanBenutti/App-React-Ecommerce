@@ -19,7 +19,7 @@ function Input({label, type="text", name, register,placeholder,errors,children})
             />
         
             {errors && errors[name]?.type ==='required' && <Form.Text>
-                <p className="text-white mt-2 mx-2">El campo es obligatorio</p>
+                <p className="text-white mx-2">El campo es obligatorio</p>
                 </Form.Text>} 
         
         {children && children}
