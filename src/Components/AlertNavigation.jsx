@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Alert } from "react-bootstrap";
+import estilos from "../Components/estilos.module.css"
 
-
-function AlertNavigation({variant, text, duration, link}){
+function AlertNavigation({variant, text, duration, link,icon}){
 
     const navigate= useNavigate();
 
@@ -19,7 +19,7 @@ function AlertNavigation({variant, text, duration, link}){
     return(
 
         <>
-        <Alert className="mt-1" variant={variant}> {text} </Alert>
+        <Alert className={estilos.Alerta} variant={variant}> {icon} {text}</Alert>
         </>
 
     )

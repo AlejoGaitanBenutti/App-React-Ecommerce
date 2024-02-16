@@ -159,7 +159,6 @@ text-decoration: none;
     flex-direction: column;
     align-items: center;
     height: fit-content;
-    background-color: red;
     background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\BackLoginPc.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -179,7 +178,7 @@ text-decoration: none;
     align-items: center;
     /* border: 1.4px solid rgb(223, 28, 191); */
     width: 25vw!important;
-    height: 50vh!important;
+    height: 100%!important;
     gap: 15px;
     transition: 0.5s;
     background-color: rgba(255, 255, 255, 0.1);
@@ -187,6 +186,7 @@ text-decoration: none;
     border: 1px solid white;
     backdrop-filter:blur(3.2px) ;
     margin-bottom: 120px;
+    
     
     
 }
@@ -206,6 +206,7 @@ text-decoration: none;
     border-radius: 20px;
     border: 1px solid white;
     backdrop-filter:blur(7px) ;
+    
     
     
     
@@ -313,8 +314,32 @@ text-decoration: none;
     background-color:#0097f550!important;
 }
 
+
+
+/* Alerts Positivas */
+
+.Alerta{
+
+font-weight: 600!important;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 6px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
 /* Media Query login y registro*/
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1050px){
     .Form{
         width: 85%!important;
         /* border: solid red; */
@@ -345,6 +370,7 @@ text-decoration: none;
 }
 
 
+
 /* media Phones  */
 @media only screen and (max-width: 700px){
 
@@ -363,6 +389,7 @@ text-decoration: none;
     }
     .buttonFormDos{
         width: 75%!important;
+        
     }
     
     .containFormRegistro{
@@ -389,6 +416,8 @@ text-decoration: none;
     }
 
 }
+
+
 
 
 /* Media Query para el iframe seccion "Contacto" */
