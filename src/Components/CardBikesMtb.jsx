@@ -15,7 +15,7 @@ function cardBikesMtb({descripcion, nombre, precio, thumbnail}){
                         <Card.Text>
                         {descripcion}
                         </Card.Text>
-                        <Button variant="succes">Comprar</Button>
+                        <Button variant="succes">Agregar al carrito</Button>
                     </Card.Body>
                 </Card>
             </Col>

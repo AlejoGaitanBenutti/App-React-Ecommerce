@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import Banner from "../Components/Banner";
 import estilos from "../Components/estilos.module.css"
 import firebase from "../Config/firebase";
-import ProductosMtb from "../Components/productosMtb";
+import ProductosMtb from "../Components/ProductosMtb";
 import ProductosBmx from "../Components/ProductosBmx";
 import BannerDos from "../Components/BannerDos";
 import ProductosRecambios from "../Components/ProductosRecambio";

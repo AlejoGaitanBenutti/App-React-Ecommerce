@@ -32,3 +32,18 @@ export async function getAllRecambiosMtb(){
 
 
 
+// Productos Tienda Online.
+
+export async function getAllProductosTienda(){
+
+    return await firebase.firestore().collection("ProductosTienda").get();
+}
+
+
+
+// agregar productos
+export async function ProductosAlta(payload){
+
+    return await firebase.firestore().collection("ProductosTienda").add(payload);
+}
+

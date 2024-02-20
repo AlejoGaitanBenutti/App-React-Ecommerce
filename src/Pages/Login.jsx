@@ -24,6 +24,7 @@ function Login(){
     const [alert, setAlert] = useState({
         variant:"",
         text:"",
+        icon:"",
         link:"/",
         duration:0,
 
@@ -46,7 +47,7 @@ function Login(){
                 </svg>,
                 text:" Ingresando...",
             
-                // link:"/",
+                link:"/",
                 duration:1500,
             })
         

@@ -5,6 +5,8 @@ import SobreNosotros from './Pages/SobreNosotros'
 import Contacto from './Pages/Contacto'
 import Login from './Pages/Login'
 import Registro from './Pages/Registro'
+import TiendaOnline from './Pages/TiendaOnline'
+import AgregarProdTienda from './Components/AgregarProdTienda'
 
 
 
@@ -26,6 +28,8 @@ function App() {
           <Route path='/contacto' element ={<Contacto/>} />
           <Route path='/login' element ={<Login/>} />
           <Route path='/registro' element ={<Registro/>} />
+          <Route path='/tiendaOnline' element ={<TiendaOnline/>} />
+          <Route path='/productos/alta' element ={<AgregarProdTienda/>} />
         </Routes>
   
     </Router>
