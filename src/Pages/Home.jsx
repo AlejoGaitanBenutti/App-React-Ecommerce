@@ -4,12 +4,13 @@ import { Container } from "react-bootstrap";
 import Banner from "../Components/Banner";
 import estilos from "../Components/estilos.module.css"
 import firebase from "../Config/firebase";
-import ProductosMtb from "../Components/ProductosMtb";
-import ProductosBmx from "../Components/ProductosBmx";
+import CarrouselBmx from "../Components/CarrouselBmx";
 import BannerDos from "../Components/BannerDos";
-import ProductosRecambios from "../Components/ProductosRecambio";
 import ServicioEnvios from "../Components/Envios";
 import Footer from "../Components/Foter";
+import CarrouselMtb from "../Components/CarrouselMtb";
+import CarrouselRecambios from "../Components/CarrouselRecambio";
+
 
 
 
@@ -17,23 +18,56 @@ function Home (){
     console.log(firebase); // mostrando que anda firebase en consola
     return(
     <>
-        
-        <Container fluid className={estilos.StylesHome}>
-            
-            <NavBar/>
-            
-            <Banner /> 
-            
-        </Container>
+        <header>
+            <Container fluid className={estilos.StylesHome}>
+                <NavBar/>
+                <Banner /> 
+            </Container>
+        </header>
 
-        <Container fluid>
-            <ProductosMtb/>
-            <ProductosBmx/>
-            <BannerDos />
-            <ProductosRecambios/>
-            <ServicioEnvios />
-            <Footer/>
-        </Container>
+        <main>
+            
+            <Container fluid>
+                <section  >
+                    <Container fluid  >
+                        
+                        <CarrouselMtb/>
+        
+                    </Container>
+                </section> 
+
+                <section >
+                    <Container fluid >
+                        <CarrouselBmx/>
+                    </Container>
+                </section>
+
+                <section>
+                    <Container fluid>
+                        <BannerDos />
+                    </Container>
+                </section>
+
+                <section>
+                    <Container fluid>
+                        <CarrouselRecambios/>
+                    </Container>
+                </section>
+
+                <section>
+                    <Container fluid>
+                        <ServicioEnvios />
+                    </Container>
+                </section>
+
+                <footer>
+                    <Container fluid>
+                        <Footer/>
+                    </Container>
+                </footer>
+
+            </Container>
+        </main>
     </>
     )
 

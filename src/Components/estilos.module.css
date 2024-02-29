@@ -9,16 +9,11 @@
     gap: 80px;
     align-items: center;
     height: 70vh;
-
-
 }
 
 .letraGrande{
     font-size: 52px;
 }
-
-
-
 
 /* navBar */
 .NavBar{
@@ -26,8 +21,6 @@
     align-items: center;
     margin-left: 2%;
     font-weight: 600;
-
-
 }
 
 .itemsNav{
@@ -51,6 +44,60 @@
 }
 
 
+/* spinner */
+.container {
+    --uib-size: 35px;
+    --uib-color: black;
+    --uib-speed: 1s;
+    --uib-stroke: 3.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--uib-size);
+    height: calc(var(--uib-size) * 0.9);
+    margin-top: 400px;
+    margin-bottom: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bar {
+    width: var(--uib-stroke);
+    height: 100%;
+    background-color: var(--uib-color);
+    transition: background-color 0.3s ease;
+}
+
+.bar:nth-child(1) {
+    animation: grow var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.45)
+    infinite;
+}
+
+.bar:nth-child(2) {
+    animation: grow var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.3)
+    infinite;
+}
+
+.bar:nth-child(3) {
+    animation: grow var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.15)
+        infinite;
+}
+
+.bar:nth-child(4) {
+        animation: grow var(--uib-speed) ease-in-out infinite;
+}
+
+@keyframes grow {
+    0%,
+    100% {
+        transform: scaleY(0.8);
+    }
+
+    50% {
+        transform: scaleY(3);
+    }
+}
+
 
 /* Banner Dos "Conocemos lo mejor para vos" */
 .BannerDos{
@@ -64,15 +111,17 @@
     align-items: center;
     
 }
+
 .PBanner{
 color: hsla(0,0%,100%,.8) ;  
 font-size: 20px; 
-
 }
+
 .H2Banner{
     color:#ffff;
     font-size:48px ;
 }
+
 .ButtonBanner{
     font-size: 18px;
     color: #ffff;
@@ -80,7 +129,6 @@ font-size: 20px;
     border: solid 1px #ffff;
     width: 16rem;   
 }
-
 
 /* Seccion de envios y servicios  */
 
@@ -91,17 +139,13 @@ align-items: center;
 
 background: linear-gradient( white,rgba(100, 100, 100, 0.705) );
 justify-content: center;
-
-
-
 }
 
 /* Iconos seccion envios y servicios */
 .iconos{
     width: 3em;
     padding: 3px 3px 3px 3px;
-    margin: 0px 13px 10px 2px;
-    
+    margin: 0px 13px 10px 2px;   
 }
 
 /* Footer */
@@ -111,7 +155,6 @@ background-position: center;
 background-size: cover;
 padding-top: 20px;
 font-family: 'Rajdhani', sans-serif;
-
 }   
 
 .HFooter{
@@ -124,7 +167,6 @@ font-family: 'Rajdhani', sans-serif;
 .AFooter{
 color:  #ffffffcc;
 text-decoration: none;
-
 }
 
 /* Sobre Nosotros */
@@ -133,26 +175,24 @@ text-decoration: none;
     font-size: 54px ;
     color: #969595de;
     border-color: hsla(0,0%,72%,.5);
-
 }
+
 .h1Element{
     color: #393939;
     font-size: 39px;
     font-weight: 700;
     padding-bottom: 20px;
-    
+
 }
+
 .pElement{
     font-size: 19px;
     color: #2b2a2a;
     margin-bottom: 50px;
-
-    
 }
 
 
-
-/* Login y registro mismo nombre de clases */
+/* Login y registro comparten algunas clases */
 
 .containLogin{
     display: flex;
@@ -165,11 +205,7 @@ text-decoration: none;
     gap: 15vh;
     background-position:center ;
     background-attachment:fixed;
-    
-    
 }
-
-
 
 .containFormLogin{
     display: flex;
@@ -186,10 +222,9 @@ text-decoration: none;
     border: 1px solid white;
     backdrop-filter:blur(3.2px) ;
     margin-bottom: 120px;
-    
-    
-    
+
 }
+
 .containFormRegistro{
 
     display: flex;
@@ -206,11 +241,6 @@ text-decoration: none;
     border-radius: 20px;
     border: 1px solid white;
     backdrop-filter:blur(7px) ;
-    
-    
-    
-    
-    
 }
 
 .Form{
@@ -220,11 +250,6 @@ text-decoration: none;
     gap: 10px;
     color: #2b2a2a;
     text-align: start;
-    
-    
-    
-    
-    
 }
 
 .signIn{
@@ -253,8 +278,6 @@ text-decoration: none;
     margin-bottom: 1rem;
     font-weight: 600!important;
     font-size: large!important;
-    
-    
 }
 
 .inputLine:hover{
@@ -262,7 +285,7 @@ text-decoration: none;
 }
 
 .buttonForm{
-    width: 50%!important;
+    width: 75%!important;
     height: 45px!important;
     border-radius: 55px!important;
     background:rgba(255, 255, 255, 0.14)!important;
@@ -280,7 +303,7 @@ text-decoration: none;
 
 /* Boton de registrarse en login */
 .buttonFormDos{
-    width: 50%!important;
+    width: 75%!important;
     height: 45px!important;
     border-radius: 55px!important;
     background: transparent!important;
@@ -296,15 +319,12 @@ text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
 
 .buttonForm:hover{
     box-shadow: 0px 0px 8px #ffffffa4;
     border:solid 1px #0097f5!important;
     background-color:rgba(0, 151, 245, 0.314)!important;
-    
 }
 
 .buttonFormDos:hover{
@@ -315,43 +335,102 @@ text-decoration: none;
 }
 
 
-
-/* Alerts Positivas */
+/* Alerts */
 
 .Alerta{
-
 font-weight: 600!important;
 display: flex;
 justify-content: center;
 align-items: center;
 gap: 6px;
-
-
-
 }
 
-
-
-
-/* Cards Tienda Online */
-
-
+/* Tienda Online */
 
 .CardsTienda{
-    width: 100%;
+    width: 85%;
     height: 100%;
     padding: 0.3em;
     border: 1px black solid!important;
     border-radius: 20px!important;
-    display: flex;
     
+}
+
+.CardsTienda:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 0px 30px 1px rgba(0, 151, 245, 0.314);
+    transition: 0.3s ease-in-out;
+}
+
+.containTienda{
+    width: 100vh;
+    
+}
+
+.ProdTienda{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+/* buscador */
+
+.buscador{
+    color: #2b2a2a!important;
+    width: 100%!important;
+    background-color: transparent!important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #cbcbcb;
+    outline: none;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: 600!important;
+    font-size: large!important;
+}
+.buscador:hover{
+    background-color:#0097f550!important;
+    border-radius: 5px;
+}
+
+
+
+
+/* carrousel */
+
+.carrousel{
     
 
 }
-.CardsTienda:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 0px 30px 1px rgba(0, 151, 245, 0.314);
-    transition: 1s ease-in-out;
+
+.CarrouselItems{
+    display: flex!important;
+    gap:5%;
+    /* background-color: #0097f5; */
+    margin: 0 auto!important;
+    justify-content: center!important;
+    
+
+}
+
+/* cards carrousel */
+.cardsHome{
+   
+    height:100%!important;
+    padding:0.4em!important;
+    border:solid 3px #66666634!important;
+    margin: auto!important;
+    max-width: 22em!important;
+    
+    
+}
+.cardImgHome{
+    max-width: 90%!important;
+    max-height: 90%!important;
+    margin: auto;
 }
 
 
@@ -388,14 +467,25 @@ gap: 6px;
     
 }
 
-.ProdTienda{
-    width: 75%;
-    
 
+
+
+
+
+
+/* media tables  */
+@media only screen and (max-width: 1024px){
+    .CardsTienda{
+        width: 75%;
+    }
+    .cardsHome{
+        width: calc(100vh/4)!important;
+    }
+    
 }
 
 /* media Phones  */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 567px){
 
     .containLogin{
         background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backLoginPhone.jpg");
@@ -423,13 +513,28 @@ gap: 6px;
 
         
     }
+    
     .ProdTienda{
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
         width: 100%;
         
-    
     }
+    .CardsTienda{
+        
+    }
+
+    .CarrouselItems{
+        
+        width: 100%!important;
+        
+    }
+
+    
+    
+
 }
 
 /* phone rotacion */
@@ -445,6 +550,9 @@ gap: 6px;
         background-image: url("../Imagenes/backLoginPhone.jpg");
     }
 
+    .CardsTienda{
+       
+    }
 }
 
 

@@ -16,6 +16,7 @@ function Input({label, type="text", name, register,placeholder,errors,children})
                 type={type} 
                 placeholder={placeholder}
                 {...register}
+                
             />
         
             {errors && errors[name]?.type ==='required' && <Form.Text>

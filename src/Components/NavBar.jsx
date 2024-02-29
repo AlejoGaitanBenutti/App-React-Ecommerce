@@ -15,7 +15,7 @@ function NavBar(){
     return(
         
         <Container fluid className="">
-            <Navbar className="w-100" expand="lg"   >
+            <Navbar className="w-100" expand="lg" aria-label="Primary"   >
                 
             <Container fluid className="align-items-center gap-5 flex-sm-row  "  >
                 <Navbar.Brand className="text-light fs-4 w-50 text-center mt-3"><Nav.Link as={Link} to={"/"}>

@@ -2,8 +2,16 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import {Button, Container, Form, Row, Col} from 'react-bootstrap';
 import { ProductosAlta } from "../services/productosServices";
-import ButtonWithLoading from "./ButtonWithLoading";
-import AlertNavigation from "../Components/AlertNavigation"
+import ButtonWithLoading from "../Components/ButtonWithLoading";
+import AlertNavigation from "../Components/AlertNavigation";
+import estilos from "../Components/estilos.module.css"
+import NavBar from "../Components/NavBar";
+import Footer from "../Components/Foter";
+
+// en este componente podria reciclar y usar menos formGroup
+
+
+
 
 function AgregarProdTienda(){
 
@@ -27,57 +35,74 @@ const [alert, setAlert] = useState({
             const document= await ProductosAlta(dataProd)
             console.log(document);
             setAlert({
-                variant:"success",
+                variant:"succes",
                 icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M16.3083 4.38394C15.7173 4.38394 15.4217 4.38394 15.1525 4.28405C15.1151 4.27017 15.0783 4.25491 15.042 4.23828C14.781 4.11855 14.5721 3.90959 14.1541 3.49167C13.1922 2.52977 12.7113 2.04882 12.1195 2.00447C12.04 1.99851 11.96 1.99851 11.8805 2.00447C11.2887 2.04882 10.8077 2.52977 9.84585 3.49166C9.42793 3.90959 9.21897 4.11855 8.95797 4.23828C8.92172 4.25491 8.88486 4.27017 8.84747 4.28405C8.57825 4.38394 8.28273 4.38394 7.69171 4.38394H7.58269C6.07478 4.38394 5.32083 4.38394 4.85239 4.85239C4.38394 5.32083 4.38394 6.07478 4.38394 7.58269V7.69171C4.38394 8.28273 4.38394 8.57825 4.28405 8.84747C4.27017 8.88486 4.25491 8.92172 4.23828 8.95797C4.11855 9.21897 3.90959 9.42793 3.49166 9.84585C2.52977 10.8077 2.04882 11.2887 2.00447 11.8805C1.99851 11.96 1.99851 12.04 2.00447 12.1195C2.04882 12.7113 2.52977 13.1922 3.49166 14.1541C3.90959 14.5721 4.11855 14.781 4.23828 15.042C4.25491 15.0783 4.27017 15.1151 4.28405 15.1525C4.38394 15.4217 4.38394 15.7173 4.38394 16.3083V16.4173C4.38394 17.9252 4.38394 18.6792 4.85239 19.1476C5.32083 19.6161 6.07478 19.6161 7.58269 19.6161H7.69171C8.28273 19.6161 8.57825 19.6161 8.84747 19.7159C8.88486 19.7298 8.92172 19.7451 8.95797 19.7617C9.21897 19.8815 9.42793 20.0904 9.84585 20.5083C10.8077 21.4702 11.2887 21.9512 11.8805 21.9955C11.96 22.0015 12.04 22.0015 12.1195 21.9955C12.7113 21.9512 13.1922 21.4702 14.1541 20.5083C14.5721 20.0904 14.781 19.8815 15.042 19.7617C15.0783 19.7451 15.1151 19.7298 15.1525 19.7159C15.4217 19.6161 15.7173 19.6161 16.3083 19.6161H16.4173C17.9252 19.6161 18.6792 19.6161 19.1476 19.1476C19.6161 18.6792 19.6161 17.9252 19.6161 16.4173V16.3083C19.6161 15.7173 19.6161 15.4217 19.7159 15.1525C19.7298 15.1151 19.7451 15.0783 19.7617 15.042C19.8815 14.781 20.0904 14.5721 20.5083 14.1541C21.4702 13.1922 21.9512 12.7113 21.9955 12.1195C22.0015 12.04 22.0015 11.96 21.9955 11.8805C21.9512 11.2887 21.4702 10.8077 20.5083 9.84585C20.0904 9.42793 19.8815 9.21897 19.7617 8.95797C19.7451 8.92172 19.7298 8.88486 19.7159 8.84747C19.6161 8.57825 19.6161 8.28273 19.6161 7.69171V7.58269C19.6161 6.07478 19.6161 5.32083 19.1476 4.85239C18.6792 4.38394 17.9252 4.38394 16.4173 4.38394H16.3083Z" stroke="#000000" stroke-width="1.5"/>
-                <path d="M8.5 16.5C9.19863 15.2923 10.5044 14.4797 12 14.4797C13.4956 14.4797 14.8014 15.2923 15.5 16.5M14 10C14 11.1046 13.1046 12 12 12C10.8955 12 10 11.1046 10 10C10 8.89544 10.8955 8.00001 12 8.00001C13.1046 8.00001 14 8.89544 14 10Z "  stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M9.42613 3.06269C10.6836 2.35423 11.3124 2 12 2C12.6876 2 13.3164 2.35423 14.5739 3.06269L16.3239 4.04861C17.6292 4.78401 18.2819 5.15171 18.6409 5.76664C19 6.38157 19 7.13157 19 8.63158V10.3684C19 11.8684 19 12.6184 18.6409 13.2334C18.2819 13.8483 17.6292 14.216 16.3239 14.9514L14.5739 15.9373C13.3164 16.6458 12.6876 17 12 17C11.3124 17 10.6836 16.6458 9.42613 15.9373L7.67613 14.9514C6.37081 14.216 5.71815 13.8483 5.35908 13.2334C5 12.6184 5 11.8684 5 10.3684V8.63158C5 7.13157 5 6.38157 5.35908 5.76664C5.71815 5.15171 6.37081 4.78401 7.67613 4.04861L9.42613 3.06269Z" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M9 10.1667C9 10.1667 9.75 10.1667 10.5 11.5C10.5 11.5 12.8824 8.16667 15 7.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.8825 15L17.5527 18.2099C17.9833 20.2723 18.1986 21.3035 17.7563 21.7923C17.3141 22.281 16.546 21.8606 15.0099 21.0198L12.7364 19.7753C12.3734 19.5766 12.1919 19.4773 12 19.4773C11.8081 19.4773 11.6266 19.5766 11.2636 19.7753L8.99008 21.0198C7.45397 21.8606 6.68592 22.281 6.24365 21.7923C5.80139 21.3035 6.01669 20.2723 6.44731 18.2099L7.11752 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>,
                 text:"Agregado Correctamente.",
-            
                 link:"/tiendaOnline",
                 duration:1500,
-            })
+            });
+            
             
         }catch(e){
             console.log("error",e)
+            setAlert({
+                variant:"danger",
+                text:"Error al añadir producto",
+                icon:<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M13 22H6.59087C5.04549 22 3.81631 21.248 2.71266 20.1966C0.453365 18.0441 4.1628 16.324 5.57757 15.4816C7.97679 14.053 10.8425 13.6575 13.5 14.2952" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z" stroke="#000000" stroke-width="1.5"/>
+                <path d="M16 22L19 19M19 19L22 16M19 19L16 16M19 19L22 22" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>,
+                duration:"0"
+            })
         }
     }
 
 
     return (
 
-        <Container fluid className="d-flex justify-content-center align-content-start " >
-            <Row >
-                <Row className="mt-1 text-center pb-3">
+        < Container fluid className="">
+        <Container fluid className="bg-dark"> 
+            <NavBar/>
+
+        </Container>
+
+        <Container fluid className={estilos.containLogin} >
+            <Row className="d-flex justify-content-center" >
+                <Row className="mt-5 text-center pb-3">
                     
-                    <p className="lead fs-2">Añadir Producto a la tienda online</p>
+                    <p className={estilos.h1Element}>Añadir Producto a la tienda online</p>
     
                 </Row>
     
-                <Form  onSubmit={handleSubmit(onSubmit)}>
+                <Form className={estilos.containFormLogin}  onSubmit={handleSubmit(onSubmit)}>
                     
     
                 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3 w-100" controlId="exampleForm.ControlInput1">
                         
-                        <Form.Label>Nombre</Form.Label>
+                        <Form.Label className="fs-4 text-uppercase text-white" >Nombre</Form.Label>
                         <Form.Control 
                         type="text" 
-                        placeholder="Ingrese su nombre"
+                        placeholder="Ingrese el nombre del producto"
                         {...register("nombre",{required:true})}/>
     
-                        {errors?.title && <div>El campo es obligatorio</div>} {/* Los errors.types van fuera del form control. */}
+                        {errors?.title && <div>El campo es obligatorio</div>} 
                         
                         
     
                     </Form.Group>
     
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput2">
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput2">
     
-                        <Form.Label>Precio</Form.Label>
+                        <Form.Label className="fs-4 text-uppercase text-white">Precio</Form.Label>
                         <Form.Control
                             type="number"
-                            placeholder="Ingrese su Precio"
+                            placeholder="Ingrese el Precio"
                             {...register("precio", {required:true})}/>
     
                             {errors?.price && <div>El campo es obligatorio</div>} 
@@ -85,9 +110,9 @@ const [alert, setAlert] = useState({
     
                     </Form.Group>
     
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput3">
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput3">
     
-                        <Form.Label>Imagen</Form.Label>
+                        <Form.Label className="fs-4 text-uppercase text-white">Imagen</Form.Label>
                         <Form.Control 
                             type="text" 
                             placeholder="URL de imagen"
@@ -98,12 +123,12 @@ const [alert, setAlert] = useState({
     
                     </Form.Group>
     
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3 w-100" controlId="exampleForm.ControlInput1">
     
-                        <Form.Label>Descripcion</Form.Label>
+                        <Form.Label className="fs-4 text-uppercase text-white">Descripcion</Form.Label>
                         <Form.Control 
                         type="text" 
-                        placeholder="Ingrese descripcion"
+                        placeholder="Ingresar descripcion"
                         {...register("descripcion",{required:true})}/>
     
                         {errors?.description && <div>El campo es obligatorio</div>} 
@@ -113,12 +138,12 @@ const [alert, setAlert] = useState({
     
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
     
-                        <Form.Label>Cadena</Form.Label>
+                        <Form.Label className="fs-4 text-uppercase text-white">Cadena</Form.Label>
                         <Form.Control 
                         type="text" 
-                        placeholder="Ingrese descripcion"
+                        placeholder="Ingrese descripcion de la cadena"
                         {...register("cadena",{required:false})}/>
     
                         {errors?.description && <div>El campo es obligatorio</div>} 
@@ -128,12 +153,12 @@ const [alert, setAlert] = useState({
     
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
     
-                        <Form.Label>Color</Form.Label>
+                        <Form.Label className="fs-4 text-uppercase text-white">Color</Form.Label>
                         <Form.Control 
                         type="text" 
-                        placeholder="Ingrese descripcion"
+                        placeholder="Ingrese descripcion del color"
                         {...register("color",{required:false})}/>
     
                         {errors?.description && <div>El campo es obligatorio</div>} 
@@ -143,38 +168,38 @@ const [alert, setAlert] = useState({
     
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Cuadro</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Cuadro</Form.Label>
                         <Form.Control 
                         type="text" 
-                        placeholder="Ingrese descripcion"
+                        placeholder="Ingrese descripcion del cuadro"
                         {...register("cuadro",{required:false})}/>
     
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Descarrilador Delantero</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Descarrilador Delantero</Form.Label>
                         <Form.Control 
                         type="text" 
-                        placeholder="Ingrese descripcion"
+                        placeholder="Ingrese descripcion descarrilador delantero"
                         {...register("descarrilador delantero",{required:false})}/>
     
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Descarrilador trasero</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Descarrilador trasero</Form.Label>
                         <Form.Control 
                         type="text" 
-                        placeholder="ingrese descripcion"
+                        placeholder="ingrese descripcion descarrilador trasero"
                         {...register("descarrilador trasero",{required:false})}/>
     
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Frenos</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white"> Frenos</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -183,8 +208,8 @@ const [alert, setAlert] = useState({
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Horquilla</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Horquilla</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -193,8 +218,8 @@ const [alert, setAlert] = useState({
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Key</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Key</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -203,8 +228,8 @@ const [alert, setAlert] = useState({
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Manija de freno</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Manija de freno</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -213,8 +238,8 @@ const [alert, setAlert] = useState({
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Marca</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Marca</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -223,8 +248,8 @@ const [alert, setAlert] = useState({
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
     
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Peso</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Peso</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -233,8 +258,8 @@ const [alert, setAlert] = useState({
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Piñon</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Piñon</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -243,8 +268,8 @@ const [alert, setAlert] = useState({
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Plato y Palancas</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Plato y Palancas</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -254,8 +279,8 @@ const [alert, setAlert] = useState({
                     </Form.Group>
 
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Rodado</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Rodado</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -264,8 +289,8 @@ const [alert, setAlert] = useState({
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Ruedas</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Ruedas</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -274,8 +299,8 @@ const [alert, setAlert] = useState({
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>SKU</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">SKU</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -284,8 +309,8 @@ const [alert, setAlert] = useState({
                         {errors?.description && <div>El campo es obligatorio</div>} 
                     </Form.Group>
 
-                    <Form.Group className="mb-3 w-75 text-start" controlId="exampleForm.ControlInput1">
-                        <Form.Label>Talle</Form.Label>
+                    <Form.Group className="mb-3 w-100 " controlId="exampleForm.ControlInput1">
+                        <Form.Label className="fs-4 text-uppercase text-white">Talle</Form.Label>
                         <Form.Control 
                         type="text" 
                         placeholder="Ingrese descripcion"
@@ -305,7 +330,8 @@ const [alert, setAlert] = useState({
             </Row>
         </Container>
     
-        
+        <Footer/>
+        </Container>
         );
 }
 
