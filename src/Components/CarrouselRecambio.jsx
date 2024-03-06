@@ -74,7 +74,7 @@ function CarrouselRecambios(){
             
             <h2 className={estilos.titleBicicletas}>Recambios Mtb </h2>
         
-            <Carousel responsive={responsive}>
+            <Carousel infinite="true" autoPlay="true" pauseOnHover="true" responsive={responsive}>
                 
             
                 {recambios.map((producto) => (

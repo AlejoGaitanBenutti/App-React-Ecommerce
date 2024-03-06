@@ -72,7 +72,7 @@ if(loading){
     return(
         <Container fluid>
             <h2 className={estilos.titleBicicletas}>Bicicletas Mtb</h2>
-            <Carousel responsive={responsive}>
+            <Carousel infinite="true" autoPlay="true" pauseOnHover="true" responsive={responsive}>
                 
             
                 {prodMtb.map((producto) => (

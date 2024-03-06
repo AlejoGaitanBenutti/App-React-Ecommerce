@@ -71,12 +71,12 @@ if(loading){
         <Container fluid >
             <h2 className={estilos.titleBicicletas}>Bicicletas BMX </h2>
                 {/*colocar este input para buscar productos cuando cree el store  */}
-            <Carousel responsive={responsive}>
+            <Carousel slidesToSlide={1} infinite="true" number autoPlay="true" pauseOnHover="true" responsive={responsive}>
                 
             
                 {prodBmx.map((producto) => (
                         
-                        <div className="mb-4  ">
+                        <div  >
                             <CardBikesBmx
                             {...producto.data()}  key={producto.id}
                             />

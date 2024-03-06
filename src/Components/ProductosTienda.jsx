@@ -1,18 +1,78 @@
-import { useState,useEffect } from "react";
-import { getAllProductosTienda } from "../services/productosServices";
+import { useState,useEffect, useContext } from "react";
+import { getAllProductosTienda, getAllMtb, getAllBmx, getAllRecambiosMtb } from "../services/productosServices";
 import { Container, Row } from "react-bootstrap";
 import CardProductosTienda from "./CardProductosTienda";
 import estilos from "../Components/estilos.module.css"
-import { waveform } from "ldrs";
+import Dropdown from 'react-bootstrap/Dropdown';
+
+
 
 function ProductosTienda(){
-
-
 
     const [prodTienda, setProdTienda] = useState([]);
     const [buscar, setBuscar] = useState("");
     const [loading, setLoading]= useState(true)
 
+    function filtroMtb() {
+        const request=async() =>{
+            try{
+                const dataMTB = await getAllMtb();
+                setProdTienda(dataMTB.docs)
+                setLoading(false)
+            }
+            catch(e){
+                console.log("error",e)
+            }
+        }
+        request();
+
+    }
+    
+    function filtroBmx() {
+
+        const request=async() =>{
+            try{
+                const dataBMX = await getAllBmx();
+                setProdTienda(dataBMX.docs)
+                setLoading(false)
+            }
+            catch(e){
+                console.log("error",e)
+            }
+        }
+        request();    
+    }
+
+    function filtroRepuestos(){
+        const request=async()=>{
+            try{
+                const dataRepuestos= await getAllRecambiosMtb();
+                setProdTienda(dataRepuestos.docs)
+                setLoading(false)
+            }
+            catch(e){
+                console.log("error",e)
+            }
+        }
+        request();
+    }
+
+    function verTodo(){
+        const request = async() =>{
+            try{
+                const data = await getAllProductosTienda();
+                console.log(data);
+                setProdTienda(data.docs)
+                setLoading(false)
+            }catch(e){
+                console.log("error",e)
+            }
+        };
+        request();
+    }
+    
+
+    
     useEffect(()=>{
         const request = async() =>{
             try{
@@ -24,13 +84,9 @@ function ProductosTienda(){
                 console.log("error",e)
             }
         };
-
         request();
-        
-
     },
     [buscar]);
-
 
     if(loading){
         return (
@@ -43,12 +99,28 @@ function ProductosTienda(){
     }else{
 
     return(
-
     <Container fluid>
 
-        <Container className="w-75">
-            <input placeholder="¿Que estas buscando?" type="search" className={estilos.buscador} value={buscar} onChange={(e) => setBuscar(e?.target?.value)}/>
+        <Container className="w-100">
+            
+            <input  placeholder="¿Que estas buscando?" type="search" className={estilos.buscador} value={buscar} onChange={(e) => setBuscar(e?.target?.value)}/>
+        
         </Container>
+        <Container fluid className={estilos.containerCategorias}>
+            <Dropdown >
+                <Dropdown.Toggle  className={estilos.ButtonCategorias} id="dropdown-basic">
+                    Categorias
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu   className="bg-dark" >
+                    <Dropdown.Item onClick={verTodo} className={estilos.categoriasDropdown} href="#/action-1">Ver Todo</Dropdown.Item>
+                    <Dropdown.Item onClick={filtroMtb} className={estilos.categoriasDropdown} href="#/action-1">Bicicletas MTB</Dropdown.Item>
+                    <Dropdown.Item onClick={filtroBmx} className={estilos.categoriasDropdown} href="#/action-2">Bicicletas BMX</Dropdown.Item>
+                    <Dropdown.Item onClick={filtroRepuestos} className={estilos.categoriasDropdown} href="#/action-3">Repuestos</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+        </Container>
+
         <Row className={estilos.ProdTienda}>
             {prodTienda.map((productoTienda) => (
 
@@ -58,12 +130,8 @@ function ProductosTienda(){
             ))}
         </Row>
 
-
     </Container>
-    
-    
-
-    )}
+    )}    
 }
 
 export default ProductosTienda;

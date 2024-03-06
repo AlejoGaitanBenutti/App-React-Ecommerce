@@ -10,6 +10,7 @@ import ServicioEnvios from "../Components/Envios";
 import Footer from "../Components/Foter";
 import CarrouselMtb from "../Components/CarrouselMtb";
 import CarrouselRecambios from "../Components/CarrouselRecambio";
+import { Whatsapp } from "../Components/Whatsapp";
 
 
 
@@ -18,6 +19,8 @@ function Home (){
     console.log(firebase); // mostrando que anda firebase en consola
     return(
     <>
+        <Whatsapp/>
+        
         <header>
             <Container fluid className={estilos.StylesHome}>
                 <NavBar/>

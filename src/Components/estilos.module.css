@@ -9,6 +9,7 @@
     gap: 80px;
     align-items: center;
     height: 70vh;
+    
 }
 
 .letraGrande{
@@ -17,30 +18,52 @@
 
 /* navBar */
 .NavBar{
-
     align-items: center;
     margin-left: 2%;
     font-weight: 600;
-}
+    
+    border-radius: 10px;
+
+} 
+
 
 .itemsNav{
     color: white !important;
     margin: 4px 4px 4px 4px;
-    font-weight: 500!important;
+    font-weight: 600!important;
     font-size: 1.0rem!important;
     text-indent: 5px;
-}
+    
+    
+} 
+
+
 
 .itemsNav:hover{
-    color:#0097f5!important;
+    text-decoration: underline;
+    transform: scale(1.01);
     
+    
+} 
+
+.logoWsp{
+    position: absolute ;
+    position: fixed;
+    left: 96%;
+    top: 90%;
+    z-index: 2;
+    width: 2.5%;
+    animation: VibrateH ease-in 2s infinite;
+    cursor: pointer;
 }
 
+
 .titleBicicletas{
-    font-size: 48px;
+    font-size: 45px;
     color: #393939;
     margin-top: 25px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 
@@ -60,33 +83,27 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 .bar {
     width: var(--uib-stroke);
     height: 100%;
     background-color: var(--uib-color);
     transition: background-color 0.3s ease;
 }
-
 .bar:nth-child(1) {
     animation: grow var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.45)
     infinite;
 }
-
 .bar:nth-child(2) {
     animation: grow var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.3)
     infinite;
 }
-
 .bar:nth-child(3) {
     animation: grow var(--uib-speed) ease-in-out calc(var(--uib-speed) * -0.15)
         infinite;
 }
-
 .bar:nth-child(4) {
         animation: grow var(--uib-speed) ease-in-out infinite;
 }
-
 @keyframes grow {
     0%,
     100% {
@@ -97,6 +114,7 @@
         transform: scaleY(3);
     }
 }
+
 
 
 /* Banner Dos "Conocemos lo mejor para vos" */
@@ -136,8 +154,8 @@ font-size: 20px;
     /* color del texto #666 */
 display: flex;
 align-items: center;
-
-background: linear-gradient( white,rgba(100, 100, 100, 0.705) );
+margin-top: 40px;
+background: #afa3a321;
 justify-content: center;
 }
 
@@ -150,8 +168,9 @@ justify-content: center;
 
 /* Footer */
 .Footer{
-background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backgroundFooter.jpg");
+background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backgroundFooter.jpg");
 background-position: center;
+
 background-size: cover;
 padding-top: 20px;
 font-family: 'Rajdhani', sans-serif;
@@ -199,7 +218,7 @@ text-decoration: none;
     flex-direction: column;
     align-items: center;
     height: fit-content;
-    background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\BackLoginPc.jpg");
+    background-image:  url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\BackLoginPc.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     gap: 15vh;
@@ -297,6 +316,7 @@ text-decoration: none;
     margin-bottom: 1rem!important;
     cursor: pointer!important;
     transition: 1.5s!important;
+    
 
 
 }
@@ -345,41 +365,95 @@ align-items: center;
 gap: 6px;
 }
 
-/* Tienda Online */
+/* -------TIENDA ONLINE------- */
+
+.containTienda{
+    width: 100%!important;
+    background-color: dark!important;
+}
+
+
 
 .CardsTienda{
-    width: 85%;
-    height: 100%;
+    width: 65%;
+    height: 100% ;
     padding: 0.3em;
-    border: 1px black solid!important;
-    border-radius: 20px!important;
+    border: 1px rgb(209, 208, 208) solid!important;
+    border-radius: 10px!important;
+    background-color: green;
+    
+    
+    
     
 }
 
 .CardsTienda:hover{
     transform: scale(1.01);
-    box-shadow: 0px 0px 30px 1px rgba(0, 151, 245, 0.314);
+    box-shadow: 3px 4px 10px 1px rgba(0, 151, 245, 0.314);
     transition: 0.3s ease-in-out;
-}
-
-.containTienda{
-    width: 100vh;
+    
     
 }
 
+.imgCardTienda{
+    margin: auto;
+    width: 75%!important;
+    
+}
+
+
+.interiorCardTienda{
+    padding-bottom: 0px!important;
+    
+}
+
+.titleCardTienda{
+    font-weight: 600!important;
+    flex-wrap: wrap!important;
+}
+
+
+
 .ProdTienda{
     width: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+
 }
+
+/* FILTROS CATEGORIA */
+
+.containerCategorias{
+    
+width: 90%!important;
+display: flex;
+justify-content: end;
+
+}
+.ButtonCategorias{
+    background-color: #2b2a2a!important;
+    width: 200px;
+    border: none!important;
+}
+
+.categoriasDropdown{
+    background-color:#2b2a2a !important;
+    color: white!important;
+
+}
+
+.categoriasDropdown:hover{
+    color: white!important;
+    text-decoration: underline!important;
+
+    
+}
+
 
 
 /* buscador */
 
 .buscador{
     color: #2b2a2a!important;
-    width: 100%!important;
+    width: 50%!important;
     background-color: transparent!important;
     border-top: none;
     border-left: none;
@@ -418,7 +492,6 @@ gap: 6px;
 
 /* cards carrousel */
 .cardsHome{
-   
     height:100%!important;
     padding:0.4em!important;
     border:solid 3px #66666634!important;
@@ -474,18 +547,38 @@ gap: 6px;
 
 
 /* media tables  */
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1150px){
     .CardsTienda{
-        width: 75%;
+        width: 95%;
+        height: 100%!important;
     }
     .cardsHome{
         width: calc(100vh/4)!important;
     }
+    .logoWsp{
+        width: 6%;
+        left: 94%;
+        top: 90%;
     
+    }
+    
+    .buttonForm{
+        width: 100%!important;
+        height: 100%;
+    }
+    
+    .containTienda{
+        width: 100%!important;
+    }
+
+
+    .containerCategorias{
+        width: 100%!important;
+    }
 }
 
 /* media Phones  */
-@media only screen and (max-width: 567px){
+@media only screen and (max-width: 430px){
 
     .containLogin{
         background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backLoginPhone.jpg");
@@ -498,12 +591,10 @@ gap: 6px;
         height: 100%!important;
     }
     .buttonForm{
-        width: 75%!important;
+        width: 100%!important;
+        height: 100%;
     }
-    .buttonFormDos{
-        width: 75%!important;
-        
-    }
+
     
     .containFormRegistro{
         width: 90vw!important;
@@ -522,18 +613,38 @@ gap: 6px;
         width: 100%;
         
     }
-    .CardsTienda{
-        
-    }
-
+    
     .CarrouselItems{
         
         width: 100%!important;
         
     }
+    .logoWsp{
+        width: 12%;
+        left: 85%;
+        top: 90%;
+    }
 
+    .CardsTienda{
+        width: 85%;
+        height: 100%!important;
+        
+    }
+    .buscador{
+        width: 100%!important;
+    }
     
-    
+    .containTienda{
+        width: 100%!important;
+        padding: 0px!important;
+        
+    }
+
+    .containerCategorias{
+        width: 100%!important;
+        justify-content: center!important;
+        align-items: center!important;
+    }
 
 }
 
@@ -553,6 +664,7 @@ gap: 6px;
     .CardsTienda{
        
     }
+
 }
 
 
@@ -579,4 +691,51 @@ gap: 6px;
     
     }
     
+}
+
+/* ANIMACION WSP */
+@keyframes VibrateH {
+    0% {
+        transform: translate(0);
+      }
+  
+      10% {
+        transform: translate(-2px, -2px);
+      }
+  
+      20% {
+        transform: translate(2px, -2px);
+      }
+  
+      30% {
+        transform: translate(-2px, 2px);
+      }
+  
+      40% {
+        transform: translate(2px, 2px);
+      }
+  
+      50% {
+        transform: translate(-2px, -2px);
+      }
+  
+      60% {
+        transform: translate(2px, -2px);
+      }
+  
+      70% {
+        transform: translate(-2px, 2px);
+      }
+  
+      80% {
+        transform: translate(-2px, -2px);
+      }
+  
+      90% {
+        transform: translate(2px, -2px);
+      }
+  
+      100% {
+        transform: translate(0);
+      }
 }

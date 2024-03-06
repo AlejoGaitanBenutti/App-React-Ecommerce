@@ -2,6 +2,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../Components/Foter";
 import estilos from "../Components/estilos.module.css"
 import NavBar from "../Components/NavBar";
+import { Whatsapp } from "../Components/Whatsapp";
+
+
 
 function Contacto(){
 
@@ -9,7 +12,9 @@ function Contacto(){
     return(
 
 <Container fluid  className="">
-    
+
+        <Whatsapp/>
+
         <Container fluid className="bg-dark mb-5 ">
             <NavBar/>
         </Container>

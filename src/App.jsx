@@ -7,7 +7,7 @@ import Login from './Pages/Login'
 import Registro from './Pages/Registro'
 import TiendaOnline from './Pages/TiendaOnline'
 import AgregarProdTienda from './Pages/AgregarProdTienda'
-
+import NotFound from './Pages/notFound'
 
 
 
@@ -21,9 +21,9 @@ function App() {
 
     
 
-  
+          
         <Routes>
-      
+        
           <Route path='/' element={<Home/>} /> 
           <Route path='/nosotros' element={<SobreNosotros/>} />
           <Route path='/contacto' element ={<Contacto/>} />
@@ -31,7 +31,7 @@ function App() {
           <Route path='/registro' element ={<Registro/>} />
           <Route path='/tiendaOnline' element ={<TiendaOnline/>} />
           <Route path='/productos/alta' element ={<AgregarProdTienda/>} />
-          
+          <Route path="*" element={<NotFound />} />
         </Routes>
   
     </Router>

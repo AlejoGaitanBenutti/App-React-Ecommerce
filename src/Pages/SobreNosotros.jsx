@@ -3,6 +3,7 @@ import NavBar from "../Components/NavBar";
 import Footer from "../Components/Foter";
 import NosotrosInfo from "../Components/NosotrosInfo";
 import ImgNosotros from "../Components/ImgNosotros";
+import { Whatsapp } from "../Components/Whatsapp";
 
 function SobreNosotros(){
 
@@ -12,6 +13,8 @@ function SobreNosotros(){
     return(
 
         <Container fluid className="d-flex flex-column justify-content-end">
+
+            <Whatsapp/>
 
             <Container fluid className="bg-dark mb-4">
                 <NavBar/>
