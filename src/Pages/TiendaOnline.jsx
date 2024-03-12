@@ -8,15 +8,6 @@ import Footer from "../Components/Foter";
 function TiendaOnline(){
 
 
-
-
-
-
-
-
-
-
-
     return(
         <Container fluid >
             <Container fluid className="bg-dark">
@@ -29,7 +20,7 @@ function TiendaOnline(){
             
 
 
-                <Container fluid  className={estilos.containTienda}>
+                <Container   className={estilos.containTienda}>
                     <ProductosTienda/>
                 </Container>
 

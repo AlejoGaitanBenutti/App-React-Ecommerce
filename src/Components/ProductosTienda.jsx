@@ -4,14 +4,14 @@ import { Container, Row } from "react-bootstrap";
 import CardProductosTienda from "./CardProductosTienda";
 import estilos from "../Components/estilos.module.css"
 import Dropdown from 'react-bootstrap/Dropdown';
+import { StoreContext } from "../Context/StoreContext";
 
 
 
 function ProductosTienda(){
 
-    const [prodTienda, setProdTienda] = useState([]);
-    const [buscar, setBuscar] = useState("");
-    const [loading, setLoading]= useState(true)
+        // Estados 
+    const {loading,setLoading, prodTienda, setProdTienda, buscar,setBuscar} = useContext(StoreContext)
 
     function filtroMtb() {
         const request=async() =>{
@@ -61,7 +61,7 @@ function ProductosTienda(){
         const request = async() =>{
             try{
                 const data = await getAllProductosTienda();
-                console.log(data);
+                console.log(data)
                 setProdTienda(data.docs)
                 setLoading(false)
             }catch(e){

@@ -8,7 +8,8 @@
     flex-direction: column;
     gap: 80px;
     align-items: center;
-    height: 70vh;
+    height: 100%!important;
+    padding-bottom: 70px;
     
 }
 
@@ -19,11 +20,12 @@
 /* navBar */
 .NavBar{
     align-items: center;
-    margin-left: 2%;
     font-weight: 600;
-    
     border-radius: 10px;
-
+    
+    width: 100%;
+    display: flex;
+    justify-content: start;
 } 
 
 
@@ -46,6 +48,21 @@
     
 } 
 
+
+.Carrito{
+    width: 20%;
+    
+}
+
+.ContainCarrito{
+display: flex;
+justify-content:end;
+background-color: #0097f5;
+
+width: 10%!important;
+
+}
+
 .logoWsp{
     position: absolute ;
     position: fixed;
@@ -63,9 +80,47 @@
     color: #393939;
     margin-top: 25px;
     font-weight: 700;
-    text-transform: uppercase;
+    
 }
 
+/* carrousel */
+
+.CarrouselItems{
+    display: flex!important;
+    gap:5%;
+    /* background-color: #0097f5; */
+    margin: 0 auto!important;
+    justify-content: center!important;
+    
+
+}
+
+.AllProducts{
+    text-decoration: underline;
+    text-decoration-color: #393939ab;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 1.2px;
+    margin-bottom: 60px;
+    color: #393939 ;
+    font-size: 18px;
+    border: none;
+}
+
+/* cards carrousel */
+.cardsHome{
+    height:100%!important;
+    padding:0.4em!important;
+    border:solid 3px #66666634!important;
+    margin: auto!important;
+    max-width: 22em!important;
+    
+    
+}
+.cardImgHome{
+    max-width: 90%!important;
+    max-height: 90%!important;
+    margin: auto;
+}
 
 /* spinner */
 .container {
@@ -124,20 +179,27 @@
     background-repeat: no-repeat;
     background-size:cover ;
     background-position: center;
-    height: 53vh;
+    height: 45vh;
     display: flex;
     align-items: center;
+    width: 100%!important;
+    
     
 }
 
 .PBanner{
 color: hsla(0,0%,100%,.8) ;  
-font-size: 20px; 
+font-family: "Zilla Slab", serif;
+font-weight: 400;
+font-style: normal;
+font-size: 18.92px ;
+letter-spacing: .015em;
 }
 
 .H2Banner{
-    color:#ffff;
-    font-size:48px ;
+    color:#ffffff;
+    font-size:44px;
+    font-weight: 700 ;
 }
 
 .ButtonBanner{
@@ -146,6 +208,12 @@ font-size: 20px;
     background-color: transparent;
     border: solid 1px #ffff;
     width: 16rem;   
+    padding: 14px ;
+    
+}
+.ButtonBanner:hover{
+    
+    border-color: #0097f5;
 }
 
 /* Seccion de envios y servicios  */
@@ -155,8 +223,9 @@ font-size: 20px;
 display: flex;
 align-items: center;
 margin-top: 40px;
-background: #afa3a321;
+background-color: #59595a13; 
 justify-content: center;
+text-align: center;
 }
 
 /* Iconos seccion envios y servicios */
@@ -166,14 +235,28 @@ justify-content: center;
     margin: 0px 13px 10px 2px;   
 }
 
+.elementPenvios{
+    font-family: "Zilla Slab", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #666666;
+}
+
+.elementH3envios{
+    color: #393939;
+    font-weight: 700;
+    font-size: 21px;
+}
+
 /* Footer */
 .Footer{
-background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backgroundFooter.jpg");
-background-position: center;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backgroundFooter.jpg");
+    background-position: center;
 
-background-size: cover;
-padding-top: 20px;
-font-family: 'Rajdhani', sans-serif;
+    background-size: cover;
+    padding-top: 20px;
+    font-family: 'Rajdhani', sans-serif;
 }   
 
 .HFooter{
@@ -189,6 +272,12 @@ text-decoration: none;
 }
 
 /* Sobre Nosotros */
+
+.containNosotros{
+    margin-bottom: 25px;
+    
+
+}
 
 .Strong{
     font-size: 54px ;
@@ -375,7 +464,7 @@ gap: 6px;
 
 
 .CardsTienda{
-    width: 65%;
+    width: 80%;
     height: 100% ;
     padding: 0.3em;
     border: 1px rgb(209, 208, 208) solid!important;
@@ -418,6 +507,37 @@ gap: 6px;
     width: 100%;
 
 }
+
+
+.stockDisponible{
+    background-color:#0097f5bd;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 38%;;
+    height: 65%;
+    padding: 0.3em;
+    font-weight: 500;
+    color: black;
+    
+
+    
+}
+
+.stockAgotado{
+    background-color:#393939;
+    align-items: center;
+    color:white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 38%;
+    height: 65%;
+    padding: 0.3em;
+    font-weight: 500;
+}
+
 
 /* FILTROS CATEGORIA */
 
@@ -473,38 +593,6 @@ justify-content: end;
 
 
 
-/* carrousel */
-
-.carrousel{
-    
-
-}
-
-.CarrouselItems{
-    display: flex!important;
-    gap:5%;
-    /* background-color: #0097f5; */
-    margin: 0 auto!important;
-    justify-content: center!important;
-    
-
-}
-
-/* cards carrousel */
-.cardsHome{
-    height:100%!important;
-    padding:0.4em!important;
-    border:solid 3px #66666634!important;
-    margin: auto!important;
-    max-width: 22em!important;
-    
-    
-}
-.cardImgHome{
-    max-width: 90%!important;
-    max-height: 90%!important;
-    margin: auto;
-}
 
 
 
@@ -549,7 +637,8 @@ justify-content: end;
 /* media tables  */
 @media only screen and (max-width: 1150px){
     .CardsTienda{
-        width: 95%;
+    
+        width: 98%;
         height: 100%!important;
     }
     .cardsHome{
@@ -579,6 +668,14 @@ justify-content: end;
 
 /* media Phones  */
 @media only screen and (max-width: 430px){
+
+    .BannerDos{
+        height: 65vh;
+    }
+
+    .containNosotros{
+        text-align: start;
+    }
 
     .containLogin{
         background-image: url("C:\Users\ALEJO\Desktop\Store React Js\BikeStore\src\Imagenes\backLoginPhone.jpg");

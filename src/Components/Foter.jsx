@@ -53,7 +53,7 @@ const Footer = () =>
     </div>
 
     <div className="footer-copyright text-center py-3 text-light" >© 2024 Copyright:
-        <a href="#" className="text-light"> BigHead</a>
+        <a href="#" className="text-light"> Gaitan Benutti Alejo</a>
     </div>
 
 </footer>

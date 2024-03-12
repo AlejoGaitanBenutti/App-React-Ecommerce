@@ -6,34 +6,23 @@ import { useForm } from "react-hook-form";
 import estilos from "../Components/estilos.module.css"
 import Footer from "../Components/Foter";
 import { create } from "../services/authServices";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ButtonWithLoading from "../Components/ButtonWithLoading";
 import AlertNavigation from "../Components/AlertNavigation";
 import { regisMessage } from "../Utils/errorMassage";
+import { AuthContext } from "../Context/AuthContext";
+
 
 
 
 
 function Registro(){
 
-    const { register,
-            handleSubmit,
-        formState:{errors},
-    } = useForm({mode:"onChange"});
+    // Estados y funciones en AuthContext
+    const {register,handleSubmit, errors, alert, setAlert, loading, setLoading} = useContext(AuthContext);
 
-    // spinner
-    const [loading, setLoading]= useState(false);
 
-    // estado alerta
-    const [alert, setAlert]= useState({
-        variant:'',
-        text:'',
-        duration:0,
-        link:"",
-        icon:""
-    })
 
-    
     const onSubmit = async(dataForm)=> {
         setLoading(true)
         try{

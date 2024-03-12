@@ -10,6 +10,7 @@ function CardBikesBmx({descripcion, nombre, precio, thumbnail}){
         <>
             <Col className='mt-5 mb-5 '>
                 <Card className={estilos.cardsHome}>
+                    
                         <Card.Img variant="top" src={thumbnail}  />
                     <Card.Body className='mt-3 '>
                         <Card.Title>{nombre}</Card.Title>

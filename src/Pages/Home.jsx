@@ -15,62 +15,65 @@ import { Whatsapp } from "../Components/Whatsapp";
 
 
 
+
 function Home (){
     console.log(firebase); // mostrando que anda firebase en consola
     return(
     <>
-        <Whatsapp/>
         
-        <header>
-            <Container fluid className={estilos.StylesHome}>
-                <NavBar/>
-                <Banner /> 
-            </Container>
-        </header>
-
-        <main>
+            <Whatsapp/>
             
-            <Container fluid>
-                <section  >
-                    <Container fluid  >
-                        
-                        <CarrouselMtb/>
+            <header>
+                <Container fluid className={estilos.StylesHome}>
+                    <NavBar/>
+                    <Banner /> 
+                </Container>
+            </header>
+
+            <main>
+                
+                <Container fluid>
+                    <section  >
+                        <Container fluid  >
+                            
+                            <CarrouselMtb/>
+            
+                        </Container>
+                    </section> 
+
+                    <section >
+                        <Container fluid >
+                            <CarrouselBmx/>
+                        </Container>
+                    </section>
+
+                    <section>
+                        <Container fluid>
+                            <BannerDos />
+                        </Container>
+                    </section>
+
+                    <section>
+                        <Container fluid>
+                            <CarrouselRecambios/>
+                        </Container>
+                    </section>
+
+                    <section>
+                        <Container fluid>
+                            <ServicioEnvios />
+                        </Container>
+                    </section>
+
+                    <footer>
+                        <Container fluid>
+                            <Footer/>
+                        </Container>
+                    </footer>
+
+                </Container>
+            </main>
         
-                    </Container>
-                </section> 
-
-                <section >
-                    <Container fluid >
-                        <CarrouselBmx/>
-                    </Container>
-                </section>
-
-                <section>
-                    <Container fluid>
-                        <BannerDos />
-                    </Container>
-                </section>
-
-                <section>
-                    <Container fluid>
-                        <CarrouselRecambios/>
-                    </Container>
-                </section>
-
-                <section>
-                    <Container fluid>
-                        <ServicioEnvios />
-                    </Container>
-                </section>
-
-                <footer>
-                    <Container fluid>
-                        <Footer/>
-                    </Container>
-                </footer>
-
-            </Container>
-        </main>
     </>
     )
 

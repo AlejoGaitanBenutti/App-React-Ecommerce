@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import {TbBabyCarriage} from "react-icons/Tb"
 import { Container } from "react-bootstrap";
 import estilos from "../Components/estilos.module.css"
+import Carrito from "./Carrito";
 
 
 
@@ -37,6 +38,7 @@ function NavBar(){
                         
                     </Nav>
                 </Navbar.Collapse>
+                
             </Container> 
             </Navbar>
         </Container>

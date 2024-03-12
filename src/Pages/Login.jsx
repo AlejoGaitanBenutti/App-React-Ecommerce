@@ -1,36 +1,23 @@
 import { Container,Row, Form, Button} from "react-bootstrap";
 import Input from "../Components/Input";
-import {  useForm } from "react-hook-form";
 import estilos from "../Components/estilos.module.css"
 import NavBar from "../Components/NavBar";
 import Footer from "../Components/Foter";
-import { useState } from "react";
+import { useContext} from "react";
 import AlertNavigation from "../Components/AlertNavigation";
 import { Link } from "react-router-dom";
 import { login } from "../services/authServices";
 import { regisMessage } from "../Utils/errorMassage";
 import ButtonWithLoading from "../Components/ButtonWithLoading";
+import { AuthContext } from "../Context/AuthContext";
+
+
 
 function Login(){
 
-    // Register de react hook forms
-    const { register,
-        handleSubmit, 
-        formState: { errors },
-        } = useForm({mode: "onChange"});
-
-
-        // estados
-    const [alert, setAlert] = useState({
-        variant:"",
-        text:"",
-        icon:"",
-        link:"/",
-        duration:0,
-
-    });
-
-
+    // Estados en AuthContext
+    const {register,handleSubmit, errors, alert, setAlert,logueo, setLogueo } = useContext(AuthContext)
+        
 
 
     const onSubmit= async (dataForm)=>{
@@ -49,7 +36,10 @@ function Login(){
             
                 link:"/",
                 duration:1500,
-            })
+            });
+
+            setLogueo(true)
+        
         
             
         
@@ -66,19 +56,12 @@ function Login(){
                 duration:0
                 
             })
+            setLogueo(false)
         }
     }
 
-
-
-
-
     return(
     
-
-
-
-
     <Container fluid className={estilos.containLogin}>
 
         <Container fluid className="bg-dark">
@@ -91,11 +74,9 @@ function Login(){
 
         <Container fluid className={estilos.containFormLogin}>
 
-                        <Row>  
+            <Row>  
                 <h5 className={estilos.signIn}> Sign In</h5>
             </Row>
-            
-
 
             <Form className={estilos.Form} onSubmit={handleSubmit(onSubmit)}>
         
@@ -136,21 +117,15 @@ function Login(){
                     </Form.Text>
 
                 </Input>
+
                 <Row className="d-flex justify-content-center flex-column align-items-center mt-3 ">
                     <ButtonWithLoading > Ingresar</ButtonWithLoading>
                     
                     <Button as={Link} to="/registro" className={estilos.buttonFormDos} >Registrarse</Button>
-                
-                    
                 </Row>
-                
-                
                 <AlertNavigation {...alert}  />
 
             </Form>
-
-            
-
         </Container>
 
         <Footer/>
